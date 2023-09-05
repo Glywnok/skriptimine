@@ -1,4 +1,1 @@
 # skriptimine
-# skriptimine
-# skriptimine
-# skriptimine
