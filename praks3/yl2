@@ -1,0 +1,24 @@
+#Folder kus ta vaatab
+folder="/var/"
+
+#Millised failid ta leiba
+logs=($(find "$folder" -type f -name "*.log"))
+
+#Loeb iga faili ridade arvu ja salvestab see massiivi
+declare -A line_count_map
+
+for log_file in "${logs[@]}"; do
+  line_count=$(wc -l < "$log_file")
+  line_count_map["$log_file"]=$line_count
+done
+
+"Sorteerib failid kahenemisjärjekorras ridade arvu alusel
+sorted_logs=($(for log_file in "${logs[@]}"; do
+  echo "$log_file ${line_count_map["$log_file"]}"
+done | sort -k2,2nr | awk '{print $1}'))
+
+#Väljeneb failide nimed õige järjekorras
+echo "log filide asukohad: "
+for log_file in "${sorted_logs[@]}"; do
+  echo "$log_file"
+done

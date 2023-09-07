@@ -1,0 +1,6 @@
+#See skript väljastab tänase kuupäeva ja aega
+var=$(date)
+echo "Current Date: $var"
+
+#See skript väljastab kuu kalendrit
+cal | awk -v d="$(date +"%e")" '{gsub(" '$d' ", " \033[1;37;41m'$d'\033[0m ")}1'
