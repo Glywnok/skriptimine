@@ -1,0 +1,14 @@
+#Loeb ainepunktide arvu
+echo -n "Sisestage ainepunktide arv: "
+read ainepunkt
+
+#Loeb nadalate arvu
+echo -n "sisestage nadalate arv: "
+read nadal
+
+#Nuud teeme matemaatika arvutamist
+
+arv=$(echo "scale=2; (($ainepunkt * 26) / $nadal)" | bc)
+umardatud=$(echo "$arv+0.5" | bc | cut -d'.' -f1)
+
+echo "Ühel hädalas tavaliselt kuulute te $umardatud tundi"

@@ -1,0 +1,7 @@
+#Aasta mil inimene sai Eesti Presidentiks
+year="2021"
+#Tema Nimi
+name="Alar Karis"
+#Ja lause ise
+lause=". aastal valitia Eesti Presidentiks"
+echo "$year$lause $name"

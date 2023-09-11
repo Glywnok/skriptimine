@@ -1,0 +1,7 @@
+echo "Mis on teie nimi?"
+read Name
+
+echo "Mis on teie perkonnanimi?"
+read perenimi
+
+echo "Tere, $Name $perenimi! Ma kutsun nüüd teid $Name" "-ina!"

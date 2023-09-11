@@ -1,0 +1,14 @@
+#Loeb inimeste arvu
+echo -n "Sisestage inimeste arv: "
+read mehe
+
+#Loeb kohti arvu
+echo -n "sisestage kohtade arv: "
+read kohti
+
+#Nuud teeme matemaatika arvutamist
+
+bussi=$((mehe / kohti))
+jaanud=$((mehe % kohti))
+
+echo "Gruppile on vaja $bussi bussi ja $jaanud inimest on maha jaanud"
