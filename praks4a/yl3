@@ -1,0 +1,23 @@
+#!/bin/bash
+# see skript loob kausta test, ja sinna 4 faili. ja pärast loob kausta backup
+
+# loon need 2 kausta
+mkdir -p ./test/
+mkdir -p ./backup/
+
+# loon 4 faili, ja panen sinna texti
+echo "I have no idea, what to put here" > ./test/first.txt
+echo "Siis kirjutan lihtsalt erinevates keeltetes" > ./test/second.txt
+echo "В эти файлы" > ./test/I.txt
+echo "easy" > ./test/sleep.txt
+
+# teen kaks kausta test kausta sees
+mkdir ./test/Kaust
+echo "See on esimene kaust" > ./test/Kaust/meh.txt
+mkdir ./test/Kaust2
+echo "See on teine kaust" > ./test/Kaust2/wow.txt
+
+# teeme backupi
+tar -czvf ./backup/test.backup.tar.gz ./test/
+
+echo "Backup on done, and is located at ./backup/test.backup.tar.gz."

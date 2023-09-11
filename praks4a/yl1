@@ -1,0 +1,20 @@
+#!/bin/bash
+#See skript küsib teie nimet ja sünniaastat, ja väljastub kui vana sa oled.
+
+#teie nime
+echo -n "Sisesta oma nimi: "
+read name
+
+#Tervitab sind
+echo "Tere, $name!"
+
+#Sinu vanus
+echo -n "Sisesta oma sünniaasta: "
+read year
+
+#arvutab vanust
+today=$(date +"%Y")
+age=$((today - year))
+
+#ja kõik koos
+echo "$name, sa oled $age aastat vana"

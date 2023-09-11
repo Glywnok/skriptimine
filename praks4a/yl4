@@ -1,0 +1,22 @@
+#!/bin/bash
+# see skript teeb varukoopaia kaustast mida kasutaja tahab ja paneb neid "backup" kausta
+
+# millist kausta teha varukoopiat
+echo -n "Siseta kausta nimet, millest teeme varukoopiat: "
+read kausta_nimi
+
+# kontrollime kas ta üldse on olemas
+if [ -d "$kausta_nimi" ]; then
+  # varukoopia nimi koos kausta nimi
+  backup_nimi="${kausta_nimi##*/}.backup.tar.gz"
+
+  # Teeme kausta kui teda pole
+  mkdir -p backup
+
+  # Teeme varukoopia valitud kaustast, ja salvestame neid backup kausts sisse
+  tar -czvf "backup/$backup_nimi" "$kausta_nimi"
+
+  echo "Varukoopia kaustast $kausta_nimi, asub backup/$backup_nimi"
+else
+  echo "Viga: Kataloogi '$kausta_nimi' ei leitud."
+fi
