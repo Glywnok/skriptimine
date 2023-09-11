@@ -1,3 +1,4 @@
+#!/bin/bash
 #Loeb inimeste arvu
 echo -n "Sisestage inimeste arv: "
 read mehe

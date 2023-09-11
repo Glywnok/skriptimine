@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #See skript väljastab tänase kuupäeva ja aega
 var=$(date)
 echo "Current Date: $var"

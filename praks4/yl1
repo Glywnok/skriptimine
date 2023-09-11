@@ -1,7 +1,12 @@
+#!/bin/bash
+
+#Loeb kasutaja nimet
 echo "Mis on teie nimi?"
 read Name
 
+#Loeb kaustaja prekonnanimet
 echo "Mis on teie perkonnanimi?"
 read perenimi
 
+#Väljastub seda
 echo "Tere, $Name $perenimi! Ma kutsun nüüd teid $Name" "-ina!"

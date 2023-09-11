@@ -1,3 +1,4 @@
+#!/bin/bash
 #Loeb ainepunktide arvu
 echo -n "Sisestage ainepunktide arv: "
 read ainepunkt

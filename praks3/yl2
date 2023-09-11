@@ -1,3 +1,4 @@
+#!/bin/bash
 #Folder kus ta vaatab
 folder="/var/"
 

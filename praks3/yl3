@@ -1,3 +1,4 @@
+#!/bin/bash
 #Ütleb kui kaua on masin käivinud juba
 h="$hostname"
 t="$uptime"

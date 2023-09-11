@@ -1,3 +1,5 @@
+#!/bin/bash
+#See skript väljastab kaks liini, ja põhimõtteliselt kõik
 u="$USER"
 echo "$u, on Arturi konto."
 echo "$u õppib ITS21 gruppis"
