@@ -1,0 +1,17 @@
+#!/bin/bash
+#See skript on tavaline kolmnurka lahend skript, kui me teame kaks nurka
+
+#kusime a kulje
+echo -n "Siseata a kylje vaartus: "
+read a_side
+
+#kusime b kulje
+echo -n "Sisesta b kylje vaartus: "
+read b_side
+
+#leiame c kylje
+c_side=$(echo "sqrt($a_side^2 + $b_side^2)" | bc)
+
+#valjastame resultaati
+echo "c = $c_side"
+

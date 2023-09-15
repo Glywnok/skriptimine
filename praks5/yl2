@@ -1,0 +1,21 @@
+#!/bin/bash
+#See skript on tavaline kolmnurka pindala skript
+
+#kusime a kulje
+echo -n "Siseata a kylje vaartus: "
+read a_side
+
+#kusime b kulje
+echo -n "Sisesta b kylje vaartus: "
+read b_side
+
+#kusime c kulje
+echo -n "Sisesta c kylje vaartus: "
+read c_side
+
+benis=$(echo "scale = 2; ($a_side + $b_side + $c_side) / 2" | bc)
+
+vastus=$(echo "sqrt($benis * ($benis - $a_side) * ($benis - $b_side) * ($benis - $c_side))" | bc )
+
+#valjastame resultaati
+echo "Selle kolmnurka pindala on $vastus"

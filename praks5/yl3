@@ -1,0 +1,25 @@
+#!/bin/bash
+# See skript kusib inimesest millal ta valjub ja  siis kui palju tal votab aega sinna jouda
+
+# Küsi kasutajalt reisi alguspäeva numbrit
+echo -n "Sisesta algus paeva(jarjekorras puhapaev(0) kuni laupaev(6) "
+read start
+
+if [ "$start" -ge 0 ] && [ "$start" -le 6 ]; then
+        # kusime kasutajalt kui palju aega tal votab
+        echo -n "Sisesta kui palju aega see sul vottab: "
+        read many
+
+        test=$(echo "$start + $many")
+        # millal tuleb
+        result=$(echo "$test % 7" | bc)
+
+        # defineerime nadalapaevad
+        nadalapaevad=("Pühapäev" "Esmaspäev" "Teisipäev" "Kolmapäev" "Neljapäev" "Reede" "Laupäev")
+
+        # result
+        echo "Tagasi tullakse nädalapäeval ${nadalapaevad[$result]}."
+        echo "Tagasituleku_paev: $result"
+else
+        echo "Viga: Palun sisestage kehtiv reisi alguspäeva numer (0-6)!"
+fi
