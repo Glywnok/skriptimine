@@ -1,0 +1,17 @@
+#!/bin/bash
+#Lihtne matemaatiline skript, kui arv on paaritu või paarimata
+
+#Kusime arvu
+echo -n "Sisesta suvalne taisarv: "
+read arv
+
+#Vaatame kas arv ise saab 2 valja arvuatda
+result=$(echo "$arv % 2" | bc)
+
+#vaatame kas ta saab 0
+if [ $result == 0 ]
+then
+	echo "Arv on paaris"
+else
+	echo "Arv on paaritu"
+fi

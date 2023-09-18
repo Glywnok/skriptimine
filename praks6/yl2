@@ -1,0 +1,20 @@
+#!/bin/bash
+#Loeb inimeste arvu
+echo -n "Sisestage inimeste arv: "
+read mehe
+
+#Loeb kohti arvu
+echo -n "sisestage kohtade arv: "
+read kohti
+
+#Nuud teeme matemaatika arvutamist
+
+bussi=$((mehe / kohti))
+jaanud=$((mehe % kohti))
+
+if test $jaanud -gt 0
+then
+	bussi=$(($bussi + 1))
+fi
+
+echo "on vaja $bussi, et bussile saaks $mehe"

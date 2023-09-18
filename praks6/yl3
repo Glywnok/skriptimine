@@ -1,0 +1,19 @@
+#!/bin/bash
+#See on skript ku son 2 then
+
+echo "1. Steam"
+echo "2. Epic Games Store"
+
+echo -n "What platform would you prefer to use? "
+read platform
+
+if [ $platform == 1 ]; then
+	echo "Hey! You picked up Steam, good job!"
+else
+	if [ $platform == 2 ]; then
+		echo "WTF? You prefer Epic? Are you fatherless?"
+	else 
+		echo "What do you mean? GOG?"
+	fi
+fi
+

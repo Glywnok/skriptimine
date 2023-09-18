@@ -1,0 +1,18 @@
+#!/bin/bash
+#See skript vaatab mida sa sisetsasid bashis, kui midagi seal pole sistatud ta teeb kohe else
+
+
+#vaatame arvu
+if [ $# == 1 ] 2>/dev/null; then
+	#uuesti declareerime teda
+	arv=$1
+	#vaatame arvu
+	if [ $((arv % 2)) == 0 ]; then
+		echo "Arv on paaris."
+	else
+		echo "Arv on paaritu."
+	fi
+#Kui arv pole sisestatud
+else
+	echo "Palun käivitage scripti uuesti, kasutades järgmise frameworki: ./yl1 [number]"
+fi
