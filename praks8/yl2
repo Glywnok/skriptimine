@@ -1,0 +1,22 @@
+#!/bin/bash
+# skript, mis võimaldab kasutajal sisestada suvalise täisarvu.
+
+echo -n "Sisesta suvaline täisarv: "
+read number
+numberorig=$number
+# kontrollime, kas arv on negatiivne
+if ((number < 0)); then
+  number=$((number * -1)) # kui negatiivne, korrutame -1-ga, et saada positiivne arv
+fi
+
+# initsialiseerime muutuja numbrite summa hoidmiseks
+sum=0
+
+# iteratsioon iga numbri kohta
+while ((number > 0)); do
+  digit=$((number % 10))
+  sum=$((sum + digit))
+  number=$((number / 10))
+done
+
+echo "Arvu $numberorig numbrite summa on $sum"

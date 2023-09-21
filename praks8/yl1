@@ -1,0 +1,19 @@
+#!/bin/bash
+# Skript, mis arvutab 10 esimese paarisarvude summat.
+# Kasutaja saab muuta num muutujat esimese for-tsükli jaoks.
+echo -n "Sisesta num: "
+read num
+
+sum=0
+count=0
+
+for ((i=1; i<=$num; i++))
+do
+  if ((i % 2 == 0))
+  then
+    sum=$((sum + i))
+    count=$((count + 1))
+  fi
+done
+
+echo "Arvude vahemikus 1 kuni $num (kaasaarvutatud) paarisarvude summa on: $sum"

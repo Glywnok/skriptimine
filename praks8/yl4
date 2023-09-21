@@ -1,0 +1,20 @@
+#!/bin/bash
+# skript, mis võimaldab kasutajale tuvastada, kas sisestatud arv on algarv või mitte.
+echo -n "sisesta suvalist arvu: "
+read arv
+
+jagaja=2
+jaak=0
+
+while ((jagaja < arv))
+do
+  jaak=$((arv % jagaja))
+  if ((jaak == 0))
+  then
+    echo "$arv - ei ole algarv"
+    exit
+  fi
+  jagaja=$((jagaja + 1))
+done
+
+echo "$arv - on algarv"
