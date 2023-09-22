@@ -16,6 +16,8 @@ elif (( $vanus >= 12 && $vanus <= 18 )); then
     echo "oled nooruk"
 elif (( $vanus >= 19 && $vanus <= 63 )); then
     echo "oled täiskasvanud"
-else
+elif (( $vanus >= 63 && $vanus <= 100)); then
     echo "oled juba vanaisa voi vanaema"
+else
+    echo "sisestatud vanus pole õiges diapasoonis"
 fi
