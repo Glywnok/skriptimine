@@ -1,0 +1,4 @@
+#!/bin/bash
+#Lihtsalt väljastub praegu kasutaja nimet
+u="$USER"
+echo "Tere, $u!"

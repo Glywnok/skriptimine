@@ -1,0 +1,12 @@
+#!/bin/bash
+# Skript valjustab mingit kuju
+
+for (( r=1; r<=5; r++))
+do
+	echo -n "$r."
+	for ((t=1; t<=5; t++))
+	do
+		echo -n "* "
+	done
+	echo ""
+done

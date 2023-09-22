@@ -1,0 +1,30 @@
+#!/bin/bash
+#skript valjustab kuju mida me tahame
+echo -n "Sisesta ridade arv: "
+read line
+#kusime kui palju tahe uldse
+
+
+echo -n "Sisesta tarnide arv reas: "
+read item
+#ja nuud kui palju uhe rea sees
+
+
+for (( r=1; r<=$line; r++))
+do
+	echo -n "$r."
+	if [ $r == 1 -o $r == $line ]; then
+		for ((t=1; t<=$item; t++))
+		do
+			echo -n "* "
+		done
+	else
+		echo -n "* "
+		for ((t=2; t<$item; t++))
+		do
+			echo -n "  "
+		done
+		echo -n "* "
+	fi
+	echo ""
+done

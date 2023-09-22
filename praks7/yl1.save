@@ -1,0 +1,23 @@
+#!/bin/bash
+echo -n "Kui vana sa oled? "
+read vanus
+
+if $vanus => 0 && $vanus <= 11
+then
+        echo "oled laps"
+elif $vanus => 11
+then
+        echo "test"
+fi
+
+#!/bin/bash
+echo -n "Kui vana sa oled? "
+read vanus
+
+if $vanus => 0 && $vanus <= 11
+then
+	echo "oled laps"
+elif $vanus => 11
+then
+	echo "test"
+fi

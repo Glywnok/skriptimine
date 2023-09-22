@@ -1,0 +1,14 @@
+#!/bin/bash
+#skript valjustab kuju mida me tahame
+echo -n "Sisesta ridade arv: "
+read line
+#kusime kui palju tahe uldse
+
+for (( r=$line; r>=1; r--)) 
+	do echo -n "$r."
+	for ((t=1; t<=$r; t++))
+	do
+		echo -n "* "
+	done
+	echo ""
+done
