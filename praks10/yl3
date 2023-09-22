@@ -1,0 +1,23 @@
+#!/bin/bash
+#kusime kasutajast tema vanust
+echo -n "Sisestage kellaaja: "
+read aeg
+
+#Kontrollime kas uldse see on number voi mitte
+if ! [[ "$aeg" =~ ^[0-9]+$ ]]; then
+    echo "Vigane sisend! Sisestage arvuline vanus."
+    exit 1
+fi
+
+#ja nuud leiame
+if (( aeg >= 7 && aeg <= 11 )); then
+    echo "Tere Hommikust"
+elif (( aeg >= 12 && aeg <= 17 )); then
+    echo "Tere päevast"
+elif (( aeg >= 18 && aeg <= 21 )); then
+    echo "Tere õhtust"
+elif (( aeg >= 22 && aeg <= 24 )) || (( aeg >= 0 && aeg <= 6 )); then
+    echo "Head ööd"
+else
+    echo "vale aja formaat"
+fi
