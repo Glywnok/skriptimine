@@ -1,0 +1,23 @@
+#!/bin/bash
+# see skript valjastab praeguse kasutaja nimi, ja aja peal tervituse
+# saame preaguse aja
+time=$(date +"%r")
+
+# saame kasutaja nimi
+username=$(whoami)
+
+# teeme tunni 24 tunni formaati
+aeg=$(date -d "$time" +"%H")
+
+# ja nuud leiame
+if (( aeg >= 7 && aeg <= 11 )); then
+    echo "tere hommikust, $username"
+elif (( aeg >= 12 && aeg <= 17 )); then
+    echo "tere päevast, $username"
+elif (( aeg >= 18 && aeg <= 21 )); then
+    echo "tere õhtust, $username"
+elif (( aeg >= 22 && aeg <= 24 )) || (( aeg >= 0 && aeg <= 6 )); then
+    echo "head ööd, $username"
+else
+    echo "see on vale aja formaat"
+fi

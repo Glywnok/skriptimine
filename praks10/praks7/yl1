@@ -1,0 +1,21 @@
+#!/bin/bash
+#kusime kasutajast tema vanust
+echo -n "Kui vana sa oled? "
+read vanus
+
+#Kontrollime kas uldse see on number voi mitte
+if ! [[ "$vanus" =~ ^[0-9]+$ ]]; then
+    echo "Vigane sisend! Sisestage arvuline vanus."
+    exit 1
+fi
+
+#ja nuud leiame
+if (( $vanus >= 0 && $vanus <= 11 )); then
+    echo "oled laps"
+elif (( $vanus >= 12 && $vanus <= 18 )); then
+    echo "oled nooruk"
+elif (( $vanus >= 19 && $vanus <= 63 )); then
+    echo "oled täiskasvanud"
+else
+    echo "oled juba vanaisa voi vanaema"
+fi
